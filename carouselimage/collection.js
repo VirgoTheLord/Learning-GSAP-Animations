@@ -1,0 +1,23 @@
+const collection = [
+  { title: "Bloom Arc", img: "1.png" },
+  { title: "Bloom Arc", img: "2.png" },
+  { title: "Bloom Arc", img: "3.png" },
+  { title: "Bloom Arc", img: "4.png" },
+  { title: "Bloom Arc", img: "5.png" },
+  { title: "Bloom Arc", img: "6.png" },
+  { title: "Bloom Arc", img: "7.png" },
+  { title: "Bloom Arc", img: "8.png" },
+  { title: "Bloom Arc", img: "9.png" },
+  { title: "Bloom Arc", img: "10.png" },
+  { title: "Bloom Arc", img: "11.png" },
+  { title: "Bloom Arc", img: "12.png" },
+  { title: "Bloom Arc", img: "13.png" },
+  { title: "Bloom Arc", img: "14.png" },
+  { title: "Bloom Arc", img: "15.png" },
+  { title: "Bloom Arc", img: "16.png" },
+  { title: "Bloom Arc", img: "17.png" },
+  { title: "Bloom Arc", img: "18.png" },
+  { title: "Bloom Arc", img: "19.png" },
+  { title: "Bloom Arc", img: "20.png" },
+];
+export default collection;

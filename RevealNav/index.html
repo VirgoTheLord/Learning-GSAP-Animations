@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="site-logo">Pixelate</div>
+        <div class="menu-toggle">
+          <div id="menu-toggle-btn">
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="header">
+        We Transform <br />Ideas into <br />
+        Digital Outcomes.
+      </div>
+      <div class="nav-container" id="nav-container">
+        <div class="nav">
+          <div class="col flex">
+            <div class="nav-logo">c/</div>
+            <div class="nav-socials">
+              <a href="#">Behance</a>
+              <a href="#">Twitter</a>
+              <a href="#">Instagram</a>
+              <a href="#">LinkedIn</a>
+              <a href="#">Medium </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="nav-link">
+              <a href="#">Work</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-link">
+              <a href="#">Services</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-link">
+              <a href="#">About</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-link">
+              <a href="#">Manifesto</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-link">
+              <a href="#">Contact</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-footer">
+          <div class="links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Terms and Conditions.</a>
+          </div>
+          <div class="contact">
+            <a href="#">alwinabyofficial@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true, reversed: true });
+
+      // Build the timeline
+      tl.to("#nav-container", {
+        autoAlpha: 1,
+        duration: 0.3,
+      })
+        .to(
+          ".site-logo",
+          {
+            color: "#fff",
+            duration: 0.2,
+          },
+          "-=0.2"
+        )
+        .from(".flex > div", {
+          opacity: 0,
+          y: 10,
+          stagger: 0.05,
+          duration: 0.4,
+        })
+        .to(
+          ".nav-link > a",
+          {
+            top: 0,
+            ease: "power2.inOut",
+            stagger: 0.1,
+            duration: 0.5,
+          },
+          "-=0.4"
+        )
+        .from(
+          ".nav-footer",
+          {
+            opacity: 0,
+            duration: 0.3,
+          },
+          "-=0.3"
+        );
+
+      // Toggle handler
+      const navBtn = document.getElementById("menu-toggle-btn");
+      navBtn.addEventListener("click", () => {
+        navBtn.classList.toggle("active");
+        if (tl.reversed()) {
+          tl.play();
+        } else {
+          tl.reverse();
+        }
+      });
+    </script>
+  </body>
+</html>
